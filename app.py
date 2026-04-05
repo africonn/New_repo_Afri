@@ -34,7 +34,7 @@ logging.basicConfig(level=logging.INFO)
 # CONFIG — all from environment variables
 # ─────────────────────────────────────────────────────────────
 
-AWS_REGION        = os.environ.get("AWS_REGION",        "af-south-1")
+AWS_REGION        = os.environ.get("AWS_REGION",        "eu-west-1")
 SAP_CLIENT_ID     = os.environ.get("SAP_CLIENT_ID",     "")
 SAP_CLIENT_SECRET = os.environ.get("SAP_CLIENT_SECRET", "")
 SAP_TOKEN_URL     = os.environ.get("SAP_TOKEN_URL",     "https://api.ariba.com/v2/oauth/token")
