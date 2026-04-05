@@ -50,8 +50,8 @@ logger = logging.getLogger(__name__)
 # ── Constants ─────────────────────────────────────────────────
 DC_EMAIL_DEFAULT = os.getenv("DC_EMAIL",       "dropshipments@spar.co.za")
 CC_EMAIL_DEFAULT = os.getenv("AFRICONN_CC",    "")
-FROM_EMAIL       = os.getenv("AFRICONN_EMAIL", "")
-AWS_REGION       = os.getenv("AWS_REGION",     "af-south-1")
+FROM_EMAIL       = os.getenv("AFRICONN_EMAIL", ""hm@afri-conn.com)
+AWS_REGION       = os.getenv("AWS_REGION",     "eu-west-1")
 CONFIG_SET       = os.getenv("SES_CONFIG_SET", "africonn-emails")
 
 # SES client — boto3 picks up IAM role automatically on App Runner
