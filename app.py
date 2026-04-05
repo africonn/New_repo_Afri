@@ -59,7 +59,15 @@ s3       = boto3.client("s3",             region_name=AWS_REGION)
 ses      = boto3.client("ses",            region_name=AWS_REGION)
 bedrock  = boto3.client("bedrock-runtime", region_name=AWS_REGION)
 
-app = FastAPI(title="AfriConn Automation", version="1.0")
+import sys
+import traceback
+
+try:
+    app = FastAPI(title="AfriConn Automation", version="1.0")
+except Exception as e:
+    print(f"STARTUP ERROR: {e}", file=sys.stderr)
+    traceback.print_exc()
+    raise
 
 
 # ─────────────────────────────────────────────────────────────
