@@ -1,0 +1,14 @@
+version: 1.0
+runtime: python311
+build:
+  commands:
+    build:
+      - python3 -m pip install -r requirements.txt
+      - python3 -m pip install uvicorn --force-reinstall
+      - which python3
+      - python3 -c "import uvicorn; print(uvicorn.__file__)"
+run:
+  command: python3 -m uvicorn app:app --host 0.0.0.0 --port 8080
+  network:
+    port: 8080
+    env: APP_PORT
