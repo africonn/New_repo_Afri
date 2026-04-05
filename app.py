@@ -57,7 +57,7 @@ secrets  = boto3.client("secretsmanager", region_name=AWS_REGION)
 textract = boto3.client("textract",       region_name=AWS_REGION)
 s3       = boto3.client("s3",             region_name=AWS_REGION)
 ses      = boto3.client("ses",            region_name=AWS_REGION)
-bedrock  = boto3.client("bedrock-runtime", region_name=AWS_REGION)
+bedrock  = boto3.client("bedrock-runtime", region_name=eu-west-1)
 
 import sys
 import traceback
